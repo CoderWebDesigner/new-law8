@@ -1,14 +1,14 @@
 .p-field {
   @apply mb-6;
 
-  .input-field {
-    label {
-      @apply text-sm font-medium text-textSecondary pb-2;
+  label {
+    @apply text-sm font-medium text-textSecondary pb-2;
 
-      span {
-        @apply text-red-500;
-      }
+    span {
+      @apply text-red-500;
     }
+  }
+  .input-field {
 
     @apply py-2.5 px-3.5 border border-borderPrimary rounded-lg;
     .p-inputtext {
