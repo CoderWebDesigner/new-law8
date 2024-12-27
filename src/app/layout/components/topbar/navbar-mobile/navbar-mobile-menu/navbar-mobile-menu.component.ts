@@ -4,7 +4,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgFor, NgClass, NgTemplateOutlet, NgIf } from '@angular/common';
 import { MenuService } from 'src/app/layout/services/menu.service';
 import { SubMenuItem } from '../../../sidebar/menu.model';
-import { SharedModule } from 'src/app/@shared/shared.module';
+import { SharedModule } from '@shared/shared.module';
 
 @Component({
     selector: 'app-navbar-mobile-menu',

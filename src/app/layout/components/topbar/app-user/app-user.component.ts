@@ -3,7 +3,7 @@ import { MenuModule } from 'primeng/menu';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import { ClickOutsideDirective } from '../../../../@shared/directives/click-outside.directive';
-import { SharedModule } from 'src/app/@shared/shared.module';
+import { SharedModule } from '@shared/shared.module';
 @Component({
   selector: 'app-user',
   templateUrl: './app-user.component.html',

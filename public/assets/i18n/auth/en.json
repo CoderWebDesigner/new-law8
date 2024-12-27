@@ -1,0 +1,14 @@
+{
+  "auth":{
+    "help":"Help",
+    "allInOneApplication":"All In One Application",
+    "authDescription":"Create An Ecommerce Website Backed By Powerful Tools That Help You Find Customers, Drive Sales, And Manage Your Day-To-Day.",
+    "loginToYourAccount":"Login to your account",
+    "username": "Username",
+    "password": "Password",
+    "rememberMe": "Remember Me",
+    "forgetPassword": "Forget Password",
+    "userNamePlaceholder": "Please Enter Your Username",
+    "passwordPlaceholder": "Please Enter Your Password"
+  }
+}

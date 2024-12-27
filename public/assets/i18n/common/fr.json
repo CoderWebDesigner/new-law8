@@ -1,0 +1,25 @@
+{
+  "common": {
+  },
+  "btn": {
+    "signIn": "Se connecter"
+  },
+  "messages": {
+    "createdSuccessfully": "Créé avec succès",
+    "updateSuccessfully": "Mis à jour avec succès",
+    "deletedSuccessfully": "Supprimé avec succès",
+    "internalServerError": "Erreur interne du serveur !",
+    "dataMessage": "Total",
+    "dropClick": "Déposez les fichiers pour télécharger ou cliquez",
+    "deletConfirmation": "Êtes-vous sûr de vouloir supprimer ?",
+    "noRecordsFound": "Aucun enregistrement trouvé"
+  },
+  "validation": {
+    "required": "Ce champ est requis !",
+    "url": "L'URL doit être valide !",
+    "email": "Veuillez entrer un email valide"
+  },
+  "status": {
+
+  }
+}

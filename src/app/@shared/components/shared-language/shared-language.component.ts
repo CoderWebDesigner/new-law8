@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Language } from './language.model';
-import { LanguageService } from 'src/app/@core/services/language.service';
+import { LanguageService } from '@core/services/language.service';
 import { ClickOutsideDirective } from '../../directives/click-outside.directive';
 @Component({
   selector: 'shared-language',
@@ -49,6 +49,12 @@ export class SharedLanguageComponent  implements OnInit {
       flag: 'assets/images/icons/flags/ar.png',
       icon: 'icon-bg agro-ar',
       code: 'ar',
+    },
+    {
+      label: 'Français',
+      flag: 'assets/images/icons/flags/fr.png',
+      icon: 'icon-bg agro-ar',
+      code: 'fr',
     },
   ];
 

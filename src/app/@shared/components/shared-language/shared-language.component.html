@@ -11,13 +11,13 @@
       [class]="'flag flag-' + activeLang.code.toLowerCase()"
       style="width: 20px"
     />
-    <span class="mx-2 text-sm text-headerTitle">{{ activeLang.label }}</span>
+    <span class="mx-2 text-sm text-white">{{ activeLang.label }}</span>
   </button>
   <div
     [@openClose]="isOpen ? 'open' : 'closed'"
     class="absolute end-0 z-20 mt-2 w-40 transform rounded-md bg-background shadow-custom ring-1 ring-transparent ring-opacity-5 transition focus:outline-none dark:bg-bodyBg"
   >
-    <ul class="flex flex-col p-4">
+    <ul class="flex flex-col p-4 bg-white rounded-lg shadow-lg">
       @for (lang of listLang; track $index) {
       <li
         (click)="setActiveLang(lang.code)"

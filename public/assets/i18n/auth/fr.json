@@ -1,0 +1,14 @@
+{
+  "auth":{
+    "help":"Aide",
+    "allInOneApplication":"Tout En Une Application",
+    "authDescription":" Créez un site Web de commerce électronique soutenu par des outils puissants qui vous aident à trouver des clients, à augmenter les ventes et à gérer votre quotidien.",
+    "loginToYourAccount":"Connectez-vous à votre compte",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "rememberMe": "Se souvenir de moi",
+    "forgetPassword": "Mot de passe oublié",
+    "userNamePlaceholder": "Veuillez saisir votre nom d'utilisateur",
+    "passwordPlaceholder": "Veuillez saisir votre mot de passe"
+  }
+}

@@ -10,8 +10,6 @@ import { MultiTranslateHttpLoader } from './@core/classes/multi-translate-http-l
 import { LanguageService } from './@core/services/language.service';
 import { ToastrModule } from 'ngx-toastr';
 import { DialogService } from 'primeng/dynamicdialog';
-import { providePrimeNG } from 'primeng/config';
-import Lara from '@primeng/themes/lara';
 
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -53,12 +51,6 @@ export const appConfig: ApplicationConfig = {
         extendedTimeOut: 500,
       })
     ]),
-        // providePrimeNG({
-        //     theme: {
-        //         preset: Lara
-
-        //     }
-        // }),
     {
       provide: APP_INITIALIZER,
       useFactory: appConfigFactory,

@@ -2,6 +2,7 @@
   "common": {
   },
   "btn": {
+    "signIn": "تسجيل الدخول"
   },
   "messages": {
     "createdSuccessfully": "تم الإنشاء بنجاح",

@@ -2,7 +2,7 @@
   "common": {
   },
   "btn": {
-
+    "signIn": "Sign In"
   },
   "messages": {
     "createdSuccessfully": "Created successfully",

@@ -6,9 +6,9 @@ import {
 import { AppUserComponent } from './app-user/app-user.component';
 import { NavbarMobileComponent } from './navbar-mobile/navbar-mobilecomponent';
 import { MenuService } from '../../services/menu.service';
-import { SharedLanguageComponent } from 'src/app/@shared/components/shared-language/shared-language.component';
+import { SharedLanguageComponent } from '@shared/components/shared-language/shared-language.component';
 import { CommonModule } from '@angular/common';
-import { SharedModule } from 'src/app/@shared/shared.module';
+import { SharedModule } from '@shared/shared.module';
 @Component({
   selector: 'app-topbar',
   templateUrl: './topbar.component.html',

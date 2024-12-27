@@ -64,7 +64,10 @@ module.exports = {
       },
 
       colors: {
-
+        primary:'var(--primary)',
+        yaleBlue:'var(--yale-blue)',
+        borderPrimary:'var(--border-primary)',
+        textSecondary:'var(--text-secondary)',
       },
       screens: {
         xs: "344px",
@@ -83,6 +86,7 @@ module.exports = {
     fontFamily: {
       poppins: ["Poppins", "system-ui", "sans-serif"],
       Kufi: ["Noto Kufi Arabic", "sans-serif"],
+      STC: ["STC", "sans-serif"],
       iconFont: "icomoon",
     },
     container: {

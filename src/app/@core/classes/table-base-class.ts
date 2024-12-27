@@ -7,9 +7,9 @@ import {
   DynamicDialogConfig,
   DynamicDialogRef,
 } from 'primeng/dynamicdialog';
-import { ConfirmModalService } from 'src/app/@shared/services/Confirm-Modal.service';
-import { SuccessModalService } from 'src/app/@shared/services/success-modal.service';
-import { UnsubscribeService } from 'src/app/@shared/services/unsubscribe/unsubscribe.service';
+import { ConfirmModalService } from '@shared/services/Confirm-Modal.service';
+import { SuccessModalService } from '@shared/services/success-modal.service';
+import { UnsubscribeService } from '@shared/services/unsubscribe/unsubscribe.service';
 import { PaginationDTO } from '../models/pagination.model';
 import { PAGESIZE } from '../utilities/defines';
 
@@ -44,13 +44,13 @@ export abstract class TableBaseClass  {
 
   // on filter
   onFilter(filtersValues:any):void {};
-  
+
   //on page change
   onPageChange(e: any) {
     this.pagination.page = e.page;
     this.getTableData();
-  }  
+  }
   //on export excel
-  onExportExcel():void{}; 
- 
+  onExportExcel():void{};
+
 }

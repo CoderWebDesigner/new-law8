@@ -8,7 +8,7 @@ import {
   DynamicDialogConfig,
   DynamicDialogRef,
 } from 'primeng/dynamicdialog';
-import { UnsubscribeService } from 'src/app/@shared/services/unsubscribe/unsubscribe.service';
+import { UnsubscribeService } from '@shared/services/unsubscribe/unsubscribe.service';
 import { ApiService } from '../api/api.service';
 
 

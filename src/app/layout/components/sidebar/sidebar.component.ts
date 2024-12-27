@@ -6,9 +6,9 @@ import {
 import { MenuService } from '../../services/menu.service';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { SubMenuItem } from './menu.model';
-import { LanguageService } from 'src/app/@core/services/language.service';
+import { LanguageService } from '@core/services/language.service';
 import { filter } from 'rxjs';
-import { SharedModule } from 'src/app/@shared/shared.module';
+import { SharedModule } from '@shared/shared.module';
 
 
 @Component({

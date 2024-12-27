@@ -1,1 +1,35 @@
-app-auth
+<div class="grid grid-cols-2">
+  <div>
+    <div class="px-8 py-4">
+      <img src="../../../../../assets/images/logo.png" alt="logo" />
+    </div>
+    <div class="h-[calc(100vh-4.25rem)] flex items-center justify-center">
+      <div class="w-3/5">
+        <router-outlet />
+      </div>
+    </div>
+  </div>
+  <div class="bg-gradient-to-b from-primary to-yaleBlue">
+    <div class="px-8 py-4 flex !justify-end">
+      {{ "" | translate }}
+      <shared-language />
+    </div>
+    <div class="h-[calc(100vh-4.25rem)] flex items-center justify-center">
+      <div class="text-center w-3/5">
+        <div class="mb-8">
+          <img
+            src="../../../../../assets/images/auth.png"
+            alt=""
+            class="w-full"
+          />
+        </div>
+        <h1 class="font-bold text-white text-4xl mb-8">
+          {{ "auth.allInOneApplication" | translate }}
+        </h1>
+        <p class="text-white text-lg">
+          {{ "auth.authDescription" | translate }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

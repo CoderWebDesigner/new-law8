@@ -1,29 +1,21 @@
-<div
-  class="input-field w-full"
-  [ngClass]="{
-    'p-input-icon-left': props['icon']
-  }"
->
-  <i *ngIf="props['icon']" [ngClass]="props['icon']"></i>
+<div class="input-field w-full flex items-center">
+  @if(props['icon']){
+  <i [ngClass]="props['icon']" class="pe-3"></i>
+  }
   <input
     class="w-full"
-    [type]="props['type']"
+    [type]="inputType"
     pInputText
     [formControl]="formControl"
     [formlyAttributes]="field"
     [ngClass]="props['class']"
-    [placeholder]="props['placeholder'] ?? 'Search'"
+    [placeholder]="props['placeholder']"
   />
-  <small *ngIf="props['hint']"> {{ props["hint"] | translate }} </small>
-
-  <div class="inputActionBtn flex items-center" *ngIf="props['inputActionBtn']">
-    <i
-      *ngIf="props['inputActionBtn'].icon"
-      class="me-1"
-      [ngClass]="props['inputActionBtn'].icon"
-    ></i>
-    <small type="button" (click)="onClickInputBtn()">
-      {{ props["inputActionBtn"].label }}</small
-    >
-  </div>
+ @if(props['type'] === 'password'){
+  <i
+    [ngClass]="showPassword ? 'icon-show' : 'icon-hide'"
+    class="pe-3 cursor-pointer"
+    (click)="togglePassword()"
+  ></i>
+  }
 </div>
