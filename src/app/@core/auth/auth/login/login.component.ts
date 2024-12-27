@@ -54,20 +54,20 @@ export class LoginComponent extends FormBaseClass implements OnInit {
         }
       },
       {
-        fieldGroupClassName: "d-flex justify-content-between align-items-center",
+        fieldGroupClassName: "flex justify-between align-items-center",
         fieldGroup: [
           {
             key: "RememberMe",
             type: "radio",
             props: {
-              label: "auth.rememberMe",
+              options:[{label:this._languageService.getTransValue("auth.rememberMe"),value:true}],
             }
           },
           {
             type: "button",
             props: {
               label: "auth.forgetPassword",
-              class: "tex-primary p-0",
+              class: "text-primary text-sm",
               onClick: () => {
                 // this._DialogService.open(ForgetpasswordComponent, {
                 //   width: '50%'

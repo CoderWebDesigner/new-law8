@@ -16,9 +16,13 @@ import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
 import { FormlyInputFieldComponent } from './components/formly-input-field/formly-input-field.component';
 import { registerTranslateExtension } from './translate.extension';
+import { FormlyRadioButtonFieldComponent } from './components/formly-radio-button-field/formly-radio-button-field.component';
+import { FormlyButtonFieldComponent } from './components/formly-button-field/formly-button-field.component';
+import { SharedButtonComponent } from '../../components/shared-button/shared-button.component';
 @NgModule({
   declarations: [
     FormlyInputFieldComponent,
+    FormlyButtonFieldComponent
   ],
   imports: [
     CommonModule,
@@ -33,12 +37,16 @@ import { registerTranslateExtension } from './translate.extension';
       ],
       types: [
         { name: 'input', component: FormlyInputFieldComponent },
+        { name: 'button', component: FormlyButtonFieldComponent },
+        { name: 'radio', component: FormlyRadioButtonFieldComponent },
       ]
     }),
     FormlyPrimeNGModule,
     TranslateModule,
     InputTextModule,
-    DropdownModule
+    DropdownModule,
+    FormlyRadioButtonFieldComponent,
+    SharedButtonComponent
   ],
   exports: [
     ReactiveFormsModule,
