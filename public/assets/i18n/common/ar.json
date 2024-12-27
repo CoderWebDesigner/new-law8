@@ -1,0 +1,24 @@
+{
+  "common": {
+  },
+  "btn": {
+  },
+  "messages": {
+    "createdSuccessfully": "تم الإنشاء بنجاح",
+    "updateSuccessfully": "تم التحديث بنجاح",
+    "deletedSuccessfully": "تم الحذف بنجاح",
+    "internalServerError": "خطأ داخلي في الخادم!",
+    "dataMessage": "المجموع",
+    "dropClick": "رفع الملفات للتحميل أو النقر فوق",
+    "deletConfirmation": "هل أنت متأكد أنك تريد حذف؟",
+    "noRecordsFound": "لا توجد عناصر"
+  },
+  "validation": {
+    "required": "هذا الحقل مطلوب!",
+    "url": "يجب أن يكون الرابط صالحًا!",
+    "email": "يرجى إدخال بريد إلكتروني صالح"
+  },
+  "status": {
+
+  }
+}

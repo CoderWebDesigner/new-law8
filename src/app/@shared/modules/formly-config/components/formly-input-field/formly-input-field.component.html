@@ -1,0 +1,29 @@
+<div
+  class="input-field w-full"
+  [ngClass]="{
+    'p-input-icon-left': props['icon']
+  }"
+>
+  <i *ngIf="props['icon']" [ngClass]="props['icon']"></i>
+  <input
+    class="w-full"
+    [type]="props['type']"
+    pInputText
+    [formControl]="formControl"
+    [formlyAttributes]="field"
+    [ngClass]="props['class']"
+    [placeholder]="props['placeholder'] ?? 'Search'"
+  />
+  <small *ngIf="props['hint']"> {{ props["hint"] | translate }} </small>
+
+  <div class="inputActionBtn flex items-center" *ngIf="props['inputActionBtn']">
+    <i
+      *ngIf="props['inputActionBtn'].icon"
+      class="me-1"
+      [ngClass]="props['inputActionBtn'].icon"
+    ></i>
+    <small type="button" (click)="onClickInputBtn()">
+      {{ props["inputActionBtn"].label }}</small
+    >
+  </div>
+</div>

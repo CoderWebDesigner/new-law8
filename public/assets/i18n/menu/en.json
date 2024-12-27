@@ -1,0 +1,9 @@
+{
+  "menu": {
+    "dashboard": "Dashboard",
+    "clients": "Clients",
+    "matters": "Matters",
+    "calendar": "Calendar",
+    "invoices": "Invoices"
+  }
+}

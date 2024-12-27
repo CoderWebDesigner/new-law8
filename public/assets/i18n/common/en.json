@@ -1,0 +1,25 @@
+{
+  "common": {
+  },
+  "btn": {
+
+  },
+  "messages": {
+    "createdSuccessfully": "Created successfully",
+    "updateSuccessfully": "Update successfully",
+    "deletedSuccessfully": "Deleted successfully",
+    "internalServerError": "Internal Server Error!",
+    "dataMessage": "Total",
+    "dropClick": "Drop files to upload or click",
+    "deletConfirmation": "Are you sure you want to delete?",
+    "noRecordsFound": "No records found"
+  },
+  "validation": {
+    "required": "This field is required!",
+    "url": "The URL should be valid!",
+    "email": "Please enter valid email"
+  },
+  "status": {
+
+  }
+}

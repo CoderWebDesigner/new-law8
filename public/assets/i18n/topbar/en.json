@@ -1,0 +1,8 @@
+{
+    "topBar": {
+        "welcome": "Welcome,",
+        "yourProfile": "Your Profile",
+        "settings": "Settings",
+        "logOut": "Logout"
+    }
+}

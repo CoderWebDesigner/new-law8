@@ -1,0 +1,9 @@
+{
+  "menu": {
+    "dashboard": "الرئيسية",
+    "clients": "العملاء",
+    "matters": "القضايا",
+    "calendar": "تقويم",
+    "invoices": "فواتير"
+  }
+}
