@@ -68,6 +68,14 @@ module.exports = {
         yaleBlue:'var(--yale-blue)',
         borderPrimary:'var(--border-primary)',
         textSecondary:'var(--text-secondary)',
+        textErrorPrimary:'var(--text-error-primary)',
+        textErrorBase:'var(--text-error-base-500)',
+        borderErrorSubtle:'var(--border-error_subtle)',
+        blue25:'var(--blue-25)',
+        grey200:'var(--grey-200)',
+        grey50:'var(--grey-50)',
+        textTertairy:'var(--text-tertairy)',
+        textConfirmTitle:'var(--text-confirm-title)'
       },
       screens: {
         xs: "344px",

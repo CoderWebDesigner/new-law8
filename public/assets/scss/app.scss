@@ -43,12 +43,11 @@
 }
 
 @layer primeng {
-    // :not(.dark) {
-    //   // /themes/lara-light-blue/theme
-    //     @import "../../../node_modules/@primeng/themes/lara/";
-    // }
+    :not(.dark) {
+      @import "../../../node_modules/primeng/resources/themes/lara-light-blue/theme";
+    }
 
-    // @import "../../../node_modules/primeng/resources/primeng.min";
+    @import "../../../node_modules/primeng/resources/primeng.min";
 }
 
 @layer tailwind-utilities {

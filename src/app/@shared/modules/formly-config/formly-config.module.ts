@@ -19,10 +19,15 @@ import { registerTranslateExtension } from './translate.extension';
 import { FormlyRadioButtonFieldComponent } from './components/formly-radio-button-field/formly-radio-button-field.component';
 import { FormlyButtonFieldComponent } from './components/formly-button-field/formly-button-field.component';
 import { SharedButtonComponent } from '../../components/shared-button/shared-button.component';
+import { FormlyOtpFieldComponent } from './components/formly-otp-field/formly-otp-field.component';
+import { FormlyPasswordFieldComponent } from './components/formly-password-field/formly-password-field.component';
+import { PasswordModule } from 'primeng/password';
+
 @NgModule({
   declarations: [
     FormlyInputFieldComponent,
-    FormlyButtonFieldComponent
+    FormlyButtonFieldComponent,
+    FormlyPasswordFieldComponent
   ],
   imports: [
     CommonModule,
@@ -39,6 +44,8 @@ import { SharedButtonComponent } from '../../components/shared-button/shared-but
         { name: 'input', component: FormlyInputFieldComponent },
         { name: 'button', component: FormlyButtonFieldComponent },
         { name: 'radio', component: FormlyRadioButtonFieldComponent },
+        { name: 'otp', component: FormlyOtpFieldComponent, extends: 'input' },
+        { name: 'password', component: FormlyPasswordFieldComponent, extends: 'input' },
       ]
     }),
     FormlyPrimeNGModule,
@@ -46,7 +53,10 @@ import { SharedButtonComponent } from '../../components/shared-button/shared-but
     InputTextModule,
     DropdownModule,
     FormlyRadioButtonFieldComponent,
-    SharedButtonComponent
+    SharedButtonComponent,
+    FormlyOtpFieldComponent,
+    TranslateModule,
+    PasswordModule
   ],
   exports: [
     ReactiveFormsModule,

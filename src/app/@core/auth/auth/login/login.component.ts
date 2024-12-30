@@ -69,9 +69,7 @@ export class LoginComponent extends FormBaseClass implements OnInit {
               label: "auth.forgetPassword",
               class: "text-primary text-sm",
               onClick: () => {
-                // this._DialogService.open(ForgetpasswordComponent, {
-                //   width: '50%'
-                // })
+                this._router.navigate(['/forget-password'])
               }
             }
           }
@@ -93,12 +91,12 @@ export class LoginComponent extends FormBaseClass implements OnInit {
       ).subscribe({
         next: (res:ApiRes) => {
           if(res.isSuccess){
-
-            this._authService.setUser({userName:this.formlyModel.userName})
+            this._authService.user.username=this.formlyModel.userName
+            // this._authService.setUser({userName:this.formlyModel.userName})
             this._router.navigate(['/auth/otp'])
           }
         },
-        error:err=>{
+        error:()=>{
           this._toastrNotifiService.displayError(this._languageService.getTransValue('messages.signInError'));
         }
       })

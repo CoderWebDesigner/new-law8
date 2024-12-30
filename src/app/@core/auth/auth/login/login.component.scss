@@ -1,15 +1,2 @@
 
-::ng-deep{
-  app-formly-radio-button-field{
-    label{
-      @apply text-sm font-medium;
-    }
-    div{
 
-      @apply flex flex-row-reverse items-center me-2;
-      input{
-        @apply scale-150
-      }
-    }
-  }
-}

@@ -16,7 +16,6 @@ export class SharedButtonComponent {
   @Input() disabled?: boolean;
   @Input() icon?: string;
   @Input() btnType: string = 'button';
-
   isLoading = input(false)
 
   @Output() onClick: any = new EventEmitter();

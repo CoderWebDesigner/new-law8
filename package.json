@@ -23,7 +23,6 @@
     "@ngx-formly/core": "^6.3.7",
     "@ngx-formly/primeng": "^6.3.7",
     "@ngx-translate/core": "^15.0.0",
-    "@primeng/themes": "^19.0.2",
     "primeng": "^17.18.11",
     "jwt-decode": "^4.0.0",
     "ngx-spinner": "^17.0.0",

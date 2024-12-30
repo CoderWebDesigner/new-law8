@@ -1,7 +1,7 @@
 <button
   [type]="btnType"
   (click)="click($event)"
-  [disabled]="disabled"
+  [disabled]="disabled||isLoading()"
   [ngClass]="styleClass"
   class="btn"
 >

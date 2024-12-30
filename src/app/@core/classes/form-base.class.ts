@@ -1,7 +1,7 @@
 import { inject, InjectionToken } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService, LanguageService, ToastrNotifiService } from '@core/services';
+import { LanguageService, StorageService, ToastrNotifiService } from '@core/services';
 import { FormlyFieldConfig, FormlyFormOptions } from '@ngx-formly/core';
 import {
   DialogService,
@@ -30,8 +30,9 @@ export abstract class FormBaseClass {
   _toastrNotifiService = inject(ToastrNotifiService)
   _languageService = inject(LanguageService);
   _dialogService = inject(DialogService);
-  _dynamicDialogConfig = inject(DynamicDialogConfig);
-  _dynamicDialogRef = inject(DynamicDialogRef);
+  // _dynamicDialogConfig = inject(DynamicDialogConfig);
+  // _dynamicDialogRef = inject(DynamicDialogRef);
+  _storageService = inject(StorageService);
   _route = inject(ActivatedRoute);
   _router = inject(Router);
   _apiService = inject(ApiService);

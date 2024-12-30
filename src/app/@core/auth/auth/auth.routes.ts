@@ -1,7 +1,7 @@
-import { Route } from "@angular/router";
+import { Routes } from "@angular/router";
 
 
-export const AUTH_ROUTES: Route[] = [
+export const AUTH_ROUTES: Routes = [
     {
         path: '', redirectTo: 'login', pathMatch: 'full'
     },

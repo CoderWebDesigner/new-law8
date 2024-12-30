@@ -16,6 +16,13 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./@core/auth/auth/auth.routes').then((mod) => mod.AUTH_ROUTES),
   },
+  {
+    path: 'forget-password',
+    loadComponent: () =>
+      import('./@core/auth/forgetpassword/forgetpassword.component').then((m) => m.ForgetpasswordComponent),
+    loadChildren: () =>
+      import('./@core/auth/forgetpassword/forgetpassword.routes').then((mod) => mod.FORGET_PASSWORD_ROUTES),
+  },
 
   { path: '', redirectTo: 'auth', pathMatch: 'full' },
   { path: '**', redirectTo: '' },
