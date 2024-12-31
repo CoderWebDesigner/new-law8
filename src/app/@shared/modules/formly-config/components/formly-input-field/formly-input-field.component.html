@@ -1,21 +1,14 @@
-<div class="input-field w-full flex items-center" [ngClass]="{'!border-borderErrorSubtle': formControl.invalid && formControl.touched}">
+<div class="input-field w-full flex items-center"
+  [ngClass]="{'!border-borderErrorSubtle': formControl.invalid && formControl.touched}">
   @if(props['icon']){
   <i [ngClass]="props['icon']" class="pe-3"></i>
   }
-  <input
-    class="w-full"
-    [type]="inputType"
-    pInputText
-    [formControl]="formControl"
-    [formlyAttributes]="field"
-    [ngClass]="props['class']"
-    [placeholder]="props['placeholder']"
-  />
- @if(props['type'] === 'password'){
-  <i
-    [ngClass]="showPassword ? 'icon-show' : 'icon-hide'"
-    class="pe-3 cursor-pointer"
-    (click)="togglePassword()"
-  ></i>
+  <input class="w-full" [type]="inputType" pInputText [formControl]="formControl" [formlyAttributes]="field"
+    [ngClass]="props['class']" [placeholder]="props['placeholder']" />
+  @if(formControl.invalid && formControl.touched) {
+  <i class="icon-error-circle text-textErrorBase"></i>
+  } @else if(props['type'] === 'password') {
+  <i [ngClass]="showPassword ? 'icon-show' : 'icon-hide'" class="pe-3 cursor-pointer" (click)="togglePassword()">
+  </i>
   }
 </div>

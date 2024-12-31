@@ -79,6 +79,7 @@ export class LoginComponent extends FormBaseClass implements OnInit {
   onSubmit() {
 
     if (this.formly.invalid) {
+      this.formly.markAllAsTouched();
       return
     }
     this.isLoading = true;
