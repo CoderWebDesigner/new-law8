@@ -37,7 +37,6 @@ export class LoginComponent extends FormBaseClass implements OnInit {
         props: {
           label: 'auth.username',
           placeholder: 'auth.userNamePlaceholder',
-          icon: "icon-user",
           required:true
         }
       },
@@ -48,7 +47,6 @@ export class LoginComponent extends FormBaseClass implements OnInit {
           type: "password",
           label: 'auth.password',
           placeholder: "auth.passwordPlaceholder",
-          icon: "icon-password",
           required:true,
           feedback:false
         }
