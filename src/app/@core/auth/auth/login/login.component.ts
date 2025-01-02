@@ -57,7 +57,7 @@ export class LoginComponent extends FormBaseClass implements OnInit {
             type: "button",
             props: {
               label: "auth.forgetPassword",
-              class: "text-primary text-sm",
+              class: "text-primary text-sm !p-0",
               onClick: () => {
                 this._router.navigate(['/forget-password'])
               }

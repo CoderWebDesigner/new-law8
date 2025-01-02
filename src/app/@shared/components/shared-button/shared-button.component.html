@@ -3,7 +3,7 @@
   (click)="click($event)"
   [disabled]="disabled||isLoading()"
   [ngClass]="styleClass"
-  class="btn"
+  class="btn px-8 py-3.5 text-lg w-full rounded-md font-sfProDisplay font-bold"
 >
 @if(icon && !isLoading()){
     <i [ngClass]="icon" class="me-2 text-xs font-medium"></i>

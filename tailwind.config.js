@@ -79,6 +79,7 @@ module.exports = {
         greyScale300:'var(--grey-scale-300)',
         dividerColor:'var(--divider-color)',
         bgColor:'var(--bg-color)',
+        grey500:'var(--grey-500)',
       },
       screens: {
         xs: "344px",
@@ -98,6 +99,8 @@ module.exports = {
       poppins: ["Poppins", "system-ui", "sans-serif"],
       Kufi: ["Noto Kufi Arabic", "sans-serif"],
       STC: ["STC", "sans-serif"],
+      sfProDisplay: ["SF Pro Display", "sans-serif"],
+      Manrope: ["Manrope", "sans-serif"],
       iconFont: "icomoon",
     },
     container: {

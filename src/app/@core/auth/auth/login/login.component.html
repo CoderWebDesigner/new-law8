@@ -1,5 +1,5 @@
-<h2 class="font-bold text-3xl mb-6">{{'auth.loginToYourAccount'|translate}}</h2>
+<h2 class="font-bold text-3xl mb-10">{{'auth.loginToYourAccount'|translate}}</h2>
 <form [formGroup]="formly" (ngSubmit)="onSubmit()">
   <formly-form [model]="formlyModel" [fields]="formlyFields" [form]="formly"/>
-  <app-shared-button [btnType]="'submit'" [label]="'btn.signIn'|translate" [styleClass]="'bg-primary text-white text-lg w-full rounded-md px-8 py-2'" [isLoading]="isLoading"/>
+  <app-shared-button [btnType]="'submit'" [label]="'btn.signIn'|translate" [styleClass]="'bg-primary text-white'" [isLoading]="isLoading"/>
 </form>

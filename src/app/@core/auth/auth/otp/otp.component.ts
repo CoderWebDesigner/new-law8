@@ -28,7 +28,7 @@ export class OtpComponent extends FormBaseClass implements OnInit {
   counterInSeconds!: number;
   ngOnInit(): void {
     this.initForm();
-    if(!this._authService.user) this._router.navigate(['/auth/login'])
+    // if(!this._authService.user) this._router.navigate(['/auth/login'])
 
   }
   override initForm(): void {

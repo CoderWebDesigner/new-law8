@@ -1,8 +1,8 @@
 .p-field {
-  @apply mb-6;
+  @apply mb-8;
 
   label {
-    @apply text-sm font-medium text-textSecondary pb-2;
+    @apply text-sm font-medium text-grey500 pb-1.5;
 
     span {
       @apply text-textErrorBase;
@@ -24,7 +24,7 @@
   }
   app-formly-radio-button-field{
     label{
-      @apply text-sm font-medium pb-0 ms-2;
+      @apply text-sm font-medium pb-0 ms-2 text-textConfirmTitle font-sfProDisplay;
     }
     @apply flex flex-row-reverse items-center  ;
     input{
@@ -34,7 +34,7 @@
   .p-inputotp{
 
     &-input{
-      @apply text-2xl font-extrabold size-14 rounded-xl border border-grey200  bg-grey50 focus:border focus:border-primary focus:shadow-none focus:bg-white
+      @apply font-Manrope text-2xl font-extrabold size-14 rounded-xl border border-grey200  bg-grey50 focus:border focus:border-primary focus:shadow-none focus:bg-white
     }
     .p-filled{
       @apply bg-blue25 border-0

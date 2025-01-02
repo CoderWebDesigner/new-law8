@@ -8,7 +8,7 @@
   @if(formControl.invalid && formControl.touched) {
   <i class="icon-error-circle text-textErrorBase"></i>
   } @else if(props['type'] === 'password') {
-  <i [ngClass]="showPassword ? 'icon-show' : 'icon-hide'" class="pe-3 cursor-pointer" (click)="togglePassword()">
+  <i [ngClass]="showPassword ? 'icon-show' : 'icon-hide'" class="cursor-pointer" (click)="togglePassword()">
   </i>
   }
 </div>
