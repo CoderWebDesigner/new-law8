@@ -44,15 +44,15 @@ export class LoginComponent extends FormBaseClass implements OnInit {
         }
       },
       {
-        fieldGroupClassName: "flex justify-between align-items-center",
+        fieldGroupClassName: "flex justify-end align-items-center mb-8",
         fieldGroup: [
-          {
-            key: "RememberMe",
-            type: "radio",
-            props: {
-              options:[{label:this._languageService.getTransValue("auth.rememberMe"),value:true}],
-            }
-          },
+          // {
+          //   key: "RememberMe",
+          //   type: "radio",
+          //   props: {
+          //     options:[{label:this._languageService.getTransValue("auth.rememberMe"),value:true}],
+          //   }
+          // },
           {
             type: "button",
             props: {
