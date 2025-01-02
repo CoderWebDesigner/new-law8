@@ -61,5 +61,10 @@
 
 html {
     // font-family: "Poppins", "Noto Kufi Arabic", sans-serif;
-    font-family: "STC", sans-serif;
+    // font-family: "STC", sans-serif;
+    @apply font-STC
+}
+
+body{
+    @apply bg-bgColor;
 }

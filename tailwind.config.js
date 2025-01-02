@@ -77,6 +77,8 @@ module.exports = {
         textTertairy:'var(--text-tertairy)',
         textConfirmTitle:'var(--text-confirm-title)',
         greyScale300:'var(--grey-scale-300)',
+        dividerColor:'var(--divider-color)',
+        bgColor:'var(--bg-color)',
       },
       screens: {
         xs: "344px",
