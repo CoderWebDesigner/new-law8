@@ -80,6 +80,7 @@ module.exports = {
         dividerColor:'var(--divider-color)',
         bgColor:'var(--bg-color)',
         grey500:'var(--grey-500)',
+        successBase500:'var(--success-base-500)',
       },
       screens: {
         xs: "344px",

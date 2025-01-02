@@ -45,7 +45,10 @@ export class ForgetpasswordEmailComponent extends FormBaseClass implements OnIni
   }
 
   onSubmit() {
-    if(this.formly.invalid)  return
+    if(this.formly.invalid) {
+      this.formly.markAllAsTouched()
+      return
+    } 
     this.isLoading = true;
     this._apiService
       .post(
