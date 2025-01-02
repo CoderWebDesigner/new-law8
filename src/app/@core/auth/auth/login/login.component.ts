@@ -9,26 +9,18 @@ import { ApiRes } from '@core/models/apiRes-model';
 import { AuthService } from '@core/services';
 import { SharedButtonComponent } from '@shared/components/shared-button/shared-button.component';
 import { FormlyConfigModule } from '@shared/modules/formly-config/formly-config.module';
+
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [
-    FormlyConfigModule,
-    FormsModule,
-    ReactiveFormsModule,
-    TranslateModule,
-    SharedButtonComponent
-  ],
-  providers:[DynamicDialogConfig,DynamicDialogRef],
+  selector: 'app-login', standalone: true,
+  imports: [FormlyConfigModule, FormsModule, ReactiveFormsModule, TranslateModule, SharedButtonComponent],
+  providers: [DynamicDialogConfig, DynamicDialogRef],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrl: './login.component.scss',
 })
 export class LoginComponent extends FormBaseClass implements OnInit {
-  _authService=inject(AuthService);
-  ngOnInit(): void {
-    this.initForm();
-  }
-
+  _authService = inject(AuthService);
+  ngOnInit(): void { this.initForm(); }
+  
   initForm(): void {
     this.formlyFields = [
       {
@@ -83,22 +75,19 @@ export class LoginComponent extends FormBaseClass implements OnInit {
       return
     }
     this.isLoading = true;
-
-      this._apiService.post(API_Config.auth.login,this.formlyModel).pipe(
-        finalize(() => this.isLoading = false),
-        this._unsubscribe.takeUntilDestroy()
-      ).subscribe({
-        next: (res:ApiRes) => {
-          if(res.isSuccess){
-            this._authService.user.username=this.formlyModel.userName
-            // this._authService.setUser({userName:this.formlyModel.userName})
-            this._router.navigate(['/auth/otp'])
-          }
-        },
-        error:()=>{
-          this._toastrNotifiService.displayError(this._languageService.getTransValue('messages.signInError'));
+    this._apiService.post(API_Config.auth.login, this.formlyModel).pipe(
+      finalize(() => (this.isLoading = false)),
+      this._unsubscribe.takeUntilDestroy()
+    ).subscribe({
+      next: (res: ApiRes) => {
+        if (res.isSuccess) {
+          this._authService.user.username = this.formlyModel.userName;
+          this._router.navigate(['/auth/otp']);
         }
-      })
-
+      },
+      error: () => {
+        this._toastrNotifiService.displayError(this._languageService.getTransValue('messages.signInError'));
+      }
+    });
   }
 }

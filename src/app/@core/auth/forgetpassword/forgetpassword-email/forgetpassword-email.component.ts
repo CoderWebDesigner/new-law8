@@ -61,6 +61,7 @@ export class ForgetpasswordEmailComponent extends FormBaseClass implements OnIni
 
           if (res?.isSuccess) {
             this._authService.user={email:this.formlyModel.email}
+            this._router.navigate(['/forget-password/otp'])
           } else {
             this._toastrNotifiService.displayError(
               this._languageService.getTransValue('messages.userIdOrEmailWrong')
