@@ -17,13 +17,16 @@ import { FormlyConfigModule } from 'src/app/@shared/modules/formly-config/formly
     FormlyConfigModule,
     SharedButtonComponent,
     TranslateModule,
-    RouterModule
+    RouterModule,
   ],
   templateUrl: './forgetpassword-change-password.component.html',
-  styleUrl: './forgetpassword-change-password.component.scss'
+  styleUrl: './forgetpassword-change-password.component.scss',
 })
-export class ForgetpasswordChangePasswordComponent extends FormBaseClass implements OnInit {
-  _authService=inject(AuthService);
+export class ForgetpasswordChangePasswordComponent
+  extends FormBaseClass
+  implements OnInit
+{
+  _authService = inject(AuthService);
   ngOnInit() {
     this.initForm();
   }
@@ -31,23 +34,23 @@ export class ForgetpasswordChangePasswordComponent extends FormBaseClass impleme
   initForm() {
     this.formlyFields = [
       {
-        key: "newPassword",
-        type: "password",
+        key: 'newPassword',
+        type: 'password',
         props: {
-          label: this._languageService.getTransValue("auth.password"),
-          required:true
-        }
+          label: this._languageService.getTransValue('auth.password'),
+          required: true,
+        },
       },
       {
-        key: "confirmPassword",
-        type: "password",
+        key: 'confirmPassword',
+        type: 'password',
         props: {
-          label: this._languageService.getTransValue("auth.confirmPassword"),
-          required:true,
+          label: this._languageService.getTransValue('auth.confirmPassword'),
+          required: true,
         },
         validators: {
           fieldMatch: {
-            expression: (control:any) =>
+            expression: (control: any) =>
               control.value === this.formlyModel.newPassword,
             message: this._languageService.getTransValue(
               'validation.passwordNotMatching'
@@ -58,40 +61,52 @@ export class ForgetpasswordChangePasswordComponent extends FormBaseClass impleme
           'props.disabled': (model) => !this.formly.get('newPassword')?.valid,
         },
       },
-    ]
+    ];
   }
 
   onSubmit() {
-    if (this.formly.invalid) return
-    this.isLoading=true
-    this._apiService.post(API_Config.auth.forgetPassword,{
-      ...this._authService.user,
-      newPassword:this.formlyModel.newPassword
-    }).pipe(
-      this._unsubscribe.takeUntilDestroy(),
-      finalize(()=>this.isLoading=false)
-    ).subscribe({
-      next:(res:ApiRes)=>{
-        if(res.isSuccess){
-          const confirmDialog=this._dialogService.open(SharedConfirmDialogComponent,{
-            modal:true,
-            width:'30vw',
-            data:{
-              title:this._languageService.getTransValue('auth.yourSuccessfullyChangedYourPassword'),
-              message:this._languageService.getTransValue('auth.youCanLoginNow'),
-              btnText:this._languageService.getTransValue('auth.backToLogin'),
-            }
-          })
-          confirmDialog.onClose.pipe(this._unsubscribe.takeUntilDestroy()).subscribe({
-            next:(res:any)=>{
-              if(res){
-                this._router.navigate(['/auth/login'])
+    if (this.formly.invalid) return;
+    this.isLoading = true;
+    this._apiService
+      .post(API_Config.auth.forgetPassword, {
+        ...this._authService.user,
+        newPassword: this.formlyModel.newPassword,
+      })
+      .pipe(
+        this._unsubscribe.takeUntilDestroy(),
+        finalize(() => (this.isLoading = false))
+      )
+      .subscribe({
+        next: (res: ApiRes) => {
+          if (res.isSuccess) {
+            const confirmDialog = this._dialogService.open(
+              SharedConfirmDialogComponent,
+              {
+                modal: true,
+                width: '30vw',
+                data: {
+                  title: this._languageService.getTransValue(
+                    'auth.yourSuccessfullyChangedYourPassword'
+                  ),
+                  message: this._languageService.getTransValue(
+                    'auth.youCanLoginNow'
+                  ),
+                  btnText:
+                    this._languageService.getTransValue('auth.backToLogin'),
+                },
               }
-            }
-          })
-        }
-      }
-    })
+            );
+            confirmDialog.onClose
+              .pipe(this._unsubscribe.takeUntilDestroy())
+              .subscribe({
+                next: (res: any) => {
+                  if (res) {
+                    this._router.navigate(['/auth/login']);
+                  }
+                },
+              });
+          }
+        },
+      });
   }
-
 }
