@@ -22,28 +22,58 @@ export class LoginComponent extends FormBaseClass implements OnInit {
   ngOnInit(): void { this.initForm(); }
   
   initForm(): void {
-    this.formlyFields = [{
-      key: 'userName', type: 'input',
-      props: { label: 'auth.username', placeholder: 'auth.userNamePlaceholder', icon: 'icon-user', required: true }
-    }, 
-    {
-      key: 'password', type: 'input',
-      props: { type: 'password', label: 'auth.password', placeholder: 'auth.passwordPlaceholder', icon: 'icon-password', required: true, feedback: false }
-    }, 
-    {
-      fieldGroupClassName: 'flex justify-between align-items-center',
-      fieldGroup: [{
-        key: 'RememberMe', type: 'radio',
-        props: { options: [{ label: this._languageService.getTransValue('auth.rememberMe'), value: true }] }
-      }, {
-        type: 'button',
-        props: { label: 'auth.forgetPassword', class: 'text-primary text-sm', onClick: () => { this._router.navigate(['/forget-password']); } }
-      }]
-    }];
+    this.formlyFields = [
+      {
+        key: "userName",
+        type: "input",
+        props: {
+          label: 'auth.username',
+          placeholder: 'auth.userNamePlaceholder',
+          required:true
+        }
+      },
+      {
+        key: "password",
+        type: "input",
+        props: {
+          type: "password",
+          label: 'auth.password',
+          placeholder: "auth.passwordPlaceholder",
+          required:true,
+          feedback:false
+        }
+      },
+      {
+        fieldGroupClassName: "flex justify-between align-items-center",
+        fieldGroup: [
+          {
+            key: "RememberMe",
+            type: "radio",
+            props: {
+              options:[{label:this._languageService.getTransValue("auth.rememberMe"),value:true}],
+            }
+          },
+          {
+            type: "button",
+            props: {
+              label: "auth.forgetPassword",
+              class: "text-primary text-sm",
+              onClick: () => {
+                this._router.navigate(['/forget-password'])
+              }
+            }
+          }
+        ]
+      }
+    ]
   }
 
   onSubmit() {
-    if (this.formly.invalid) return;
+
+    if (this.formly.invalid) {
+      this.formly.markAllAsTouched();
+      return
+    }
     this.isLoading = true;
     this._apiService.post(API_Config.auth.login, this.formlyModel).pipe(
       finalize(() => (this.isLoading = false)),

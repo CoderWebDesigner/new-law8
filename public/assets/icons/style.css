@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?m35jzx');
-  src:  url('fonts/icomoon.eot?m35jzx#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?m35jzx') format('truetype'),
-    url('fonts/icomoon.woff?m35jzx') format('woff'),
-    url('fonts/icomoon.svg?m35jzx#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?karbpp');
+  src:  url('fonts/icomoon.eot?karbpp#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?karbpp') format('truetype'),
+    url('fonts/icomoon.woff?karbpp') format('woff'),
+    url('fonts/icomoon.svg?karbpp#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,39 +25,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-success-circle:before {
+  content: "\e902";
+  color: #17b26a;
+}
+.icon-error-circle:before {
+  content: "\e901";
+}
+.icon-arrow-down:before {
+  content: "\e900";
+}
 .icon-hide:before {
   content: "\e909";
 }
 .icon-show:before {
   content: "\e90a";
-}
-.icon-password:before {
-  content: "\e90b";
-}
-.icon-user:before {
-  content: "\e908";
-}
-.icon-hambuger:before {
-  content: "\e907";
-}
-.icon-setting:before {
-  content: "\e900";
-}
-.icon-search:before {
-  content: "\e901";
-}
-.icon-invoice:before {
-  content: "\e902";
-}
-.icon-matter:before {
-  content: "\e903";
-}
-.icon-calendar:before {
-  content: "\e904";
-}
-.icon-client:before {
-  content: "\e905";
-}
-.icon-dashboard:before {
-  content: "\e906";
 }

@@ -7,10 +7,7 @@ import {
   DynamicDialogConfig,
   DynamicDialogRef,
 } from 'primeng/dynamicdialog';
-import { ConfirmModalService } from '@shared/services/Confirm-Modal.service';
-import { SuccessModalService } from '@shared/services/success-modal.service';
 import { UnsubscribeService } from '@shared/services/unsubscribe/unsubscribe.service';
-import { PaginationDTO } from '../models/pagination.model';
 import { PAGESIZE } from '../utilities/defines';
 
 

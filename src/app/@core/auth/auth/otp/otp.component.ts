@@ -1,13 +1,14 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
-import { finalize } from 'rxjs';
+import { finalize, interval, take } from 'rxjs';
 import { API_Config } from 'src/app/@core/api/api-config/api.config';
 import { FormBaseClass } from 'src/app/@core/classes/form-base.class';
 import { ApiRes } from 'src/app/@core/models/apiRes-model';
 import { AuthService } from 'src/app/@core/services';
 import { SharedButtonComponent } from 'src/app/@shared/components/shared-button/shared-button.component';
 import { FormlyConfigModule } from 'src/app/@shared/modules/formly-config/formly-config.module';
+import { SecondsToTimePipe } from 'src/app/@shared/services/secondsToTime/seconds-to-time.pipe';
 
 @Component({
   selector: 'app-otp',
@@ -15,14 +16,16 @@ import { FormlyConfigModule } from 'src/app/@shared/modules/formly-config/formly
   imports: [
     FormlyConfigModule,
     SharedButtonComponent,
-    TranslateModule
+    TranslateModule,
+    SecondsToTimePipe
   ],
-  providers:[DynamicDialogConfig,DynamicDialogRef],
+  providers:[DynamicDialogConfig,DynamicDialogRef,SecondsToTimePipe],
   templateUrl: './otp.component.html',
   styleUrl: './otp.component.scss'
 })
 export class OtpComponent extends FormBaseClass implements OnInit {
   _authService=inject(AuthService);
+  counterInSeconds!: number;
   ngOnInit(): void {
     this.initForm();
     if(!this._authService.user) this._router.navigate(['/auth/login'])
@@ -79,5 +82,19 @@ export class OtpComponent extends FormBaseClass implements OnInit {
         },
       });
   }
+    countDown() {
+      this.isLoading = true;
+      this.counterInSeconds=300;
+      interval(1000).pipe(
+        take(this.counterInSeconds)
+      ).subscribe({
+        next: () => {
+          this.counterInSeconds--;
+        },
+        complete: () => {
+          this.isLoading = false;
+        }
+      });
+    }
 
 }

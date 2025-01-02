@@ -43,9 +43,7 @@
 }
 
 @layer primeng {
-    :not(.dark) {
-      @import "../../../node_modules/primeng/resources/themes/lara-light-blue/theme";
-    }
+    @import "../../../node_modules/primeng/resources/themes/lara-light-blue/theme";
 
     @import "../../../node_modules/primeng/resources/primeng.min";
 }

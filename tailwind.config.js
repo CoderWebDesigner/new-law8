@@ -75,7 +75,8 @@ module.exports = {
         grey200:'var(--grey-200)',
         grey50:'var(--grey-50)',
         textTertairy:'var(--text-tertairy)',
-        textConfirmTitle:'var(--text-confirm-title)'
+        textConfirmTitle:'var(--text-confirm-title)',
+        greyScale300:'var(--grey-scale-300)',
       },
       screens: {
         xs: "344px",
