@@ -4,7 +4,7 @@
   <i [ngClass]="props['icon']" class="pe-3"></i>
   }
   <input class="w-full" [type]="inputType" pInputText [formControl]="formControl" [formlyAttributes]="field"
-    [ngClass]="props['class']" [placeholder]="props['placeholder']" />
+    [ngClass]="props['class']" [placeholder]="props['placeholder']"/>
   @if(formControl.invalid && formControl.touched) {
   <i class="icon-error-circle text-textErrorBase"></i>
   } @else if(props['type'] === 'password') {

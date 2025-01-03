@@ -9,42 +9,54 @@ import { ApiRes } from '@core/models/apiRes-model';
 import { AuthService } from '@core/services';
 import { SharedButtonComponent } from '@shared/components/shared-button/shared-button.component';
 import { FormlyConfigModule } from '@shared/modules/formly-config/formly-config.module';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login', standalone: true,
-  imports: [FormlyConfigModule, FormsModule, ReactiveFormsModule, TranslateModule, SharedButtonComponent],
+  selector: 'app-login',
+  standalone: true,
+  imports: [
+    FormlyConfigModule,
+    FormsModule,
+    ReactiveFormsModule,
+    TranslateModule,
+    SharedButtonComponent,
+  ],
   providers: [DynamicDialogConfig, DynamicDialogRef],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
 export class LoginComponent extends FormBaseClass implements OnInit {
   _authService = inject(AuthService);
-  ngOnInit(): void { this.initForm(); }
-  
+  private router = inject(Router);
+
+  ngOnInit(): void {
+    this.initForm();
+  }
+
   initForm(): void {
     this.formlyFields = [
       {
-        key: "userName",
-        type: "input",
+        key: 'userName',
+        type: 'input',
         props: {
           label: 'auth.username',
           placeholder: 'auth.userNamePlaceholder',
-          required:true
-        }
+          required: true,
+        },
       },
       {
-        key: "password",
-        type: "input",
+        key: 'password',
+        type: 'input',
         props: {
-          type: "password",
+          type: 'password',
           label: 'auth.password',
-          placeholder: "auth.passwordPlaceholder",
-          required:true,
-          feedback:false
-        }
+          placeholder: 'auth.passwordPlaceholder',
+          required: true,
+          feedback: false,
+        },
       },
       {
-        fieldGroupClassName: "flex justify-end align-items-center mb-8",
+        fieldGroupClassName: 'flex justify-end align-items-center mb-8',
         fieldGroup: [
           // {
           //   key: "RememberMe",
@@ -54,40 +66,67 @@ export class LoginComponent extends FormBaseClass implements OnInit {
           //   }
           // },
           {
-            type: "button",
+            type: 'button',
             props: {
-              label: "auth.forgetPassword",
-              class: "text-primary text-sm !p-0",
+              label: 'auth.forgetPassword',
+              class: 'text-primary text-sm !p-0',
               onClick: () => {
-                this._router.navigate(['/forget-password'])
-              }
-            }
-          }
-        ]
-      }
-    ]
+                this._router.navigate(['/forget-password']);
+              },
+            },
+          },
+        ],
+      },
+    ];
   }
 
   onSubmit() {
-
     if (this.formly.invalid) {
       this.formly.markAllAsTouched();
-      return
+      return;
     }
     this.isLoading = true;
-    this._apiService.post(API_Config.auth.login, this.formlyModel).pipe(
-      finalize(() => (this.isLoading = false)),
-      this._unsubscribe.takeUntilDestroy()
-    ).subscribe({
-      next: (res: ApiRes) => {
-        if (res.isSuccess) {
-          this._authService.user.username = this.formlyModel.userName;
-          this._router.navigate(['/auth/otp']);
-        }
-      },
-      error: () => {
-        this._toastrNotifiService.displayError(this._languageService.getTransValue('messages.signInError'));
-      }
-    });
+    this._apiService
+      .post(API_Config.auth.login, this.formlyModel)
+      .pipe(
+        finalize(() => (this.isLoading = false)),
+        this._unsubscribe.takeUntilDestroy()
+      )
+      .subscribe({
+        next: (res: ApiRes) => {
+          if (res.isSuccess) {
+            this._authService.setUser({userName:this.formlyModel.userName})
+            this.router.navigate(['/auth/otp']);
+          }
+        },
+        error: () => {
+          this._toastrNotifiService.displayError(
+            this._languageService.getTransValue('messages.signInError')
+          );
+        },
+      });
   }
+
+  // onSubmit() {
+  //   if (this.formly.invalid) {
+  //     this.formly.markAllAsTouched(); 
+  //     return;
+  //   }
+  //   this.isLoading = true;
+  //   this._apiService
+  //     .post(API_Config.auth.login, this.formlyModel)
+  //     .pipe(
+  //       finalize(() => (this.isLoading = false)),
+  //       this._unsubscribe.takeUntilDestroy()
+  //     )
+  //     .subscribe({
+  //       next: (res: ApiRes) => {
+  //         if (res.isSuccess) {
+  //           this._authService.setUser({ userName: this.formlyModel.userName });
+  //           this.router.navigate(['/auth/otp']);
+  //         }
+  //       },
+  //     });
+  // }
+  
 }

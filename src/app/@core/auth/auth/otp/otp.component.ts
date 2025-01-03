@@ -26,9 +26,11 @@ import { SecondsToTimePipe } from 'src/app/@shared/services/secondsToTime/second
 export class OtpComponent extends FormBaseClass implements OnInit {
   _authService=inject(AuthService);
   counterInSeconds!: number;
+
   ngOnInit(): void {
     this.initForm();
-    // if(!this._authService.user) this._router.navigate(['/auth/login'])
+    this.countDown();
+    if(!this._authService.user) this._router.navigate(['/auth/login'])
 
   }
   override initForm(): void {
@@ -40,7 +42,11 @@ export class OtpComponent extends FormBaseClass implements OnInit {
           required: true,
           length:5
         }
-      }
+      },
+      {
+        key: 'userName',
+        defaultValue: this._authService.user?.userName,
+      },
     ]
   }
   onSubmit() {

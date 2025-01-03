@@ -23,6 +23,7 @@
     "createNewPassword": "Create New Password?",
     "createNewPasswordDescription": "Please enter a new password. Your new password must be different from previous password.",
     "yourSuccessfullyChangedYourPassword": "Your password has been changed successfully",
-    "youCanLoginNow": "You can now login"
+    "youCanLoginNow": "You can now login",
+    "weHaveJustSentAVerificationCodeTo":"We Have Just Sent A Verification Code To"
   }
 }

@@ -23,6 +23,7 @@
     "createNewPassword": "إنشاء كلمة مرور جديدة؟",
     "createNewPasswordDescription": "الرجاء إدخال كلمة مرور جديدة. يجب أن تكون كلمة المرور الجديدة مختلفة عن كلمة المرور السابقة.",
     "yourSuccessfullyChangedYourPassword": "تم تغيير كلمة المرور بنجاح",
-    "youCanLoginNow": "يمكنك الآن تسجيل الدخول"
+    "youCanLoginNow": "يمكنك الآن تسجيل الدخول",
+    "weHaveJustSentAVerificationCodeTo":"لقد أرسلنا رمز التحقق إلى"
   }
 }

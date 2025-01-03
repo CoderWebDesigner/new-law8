@@ -23,6 +23,7 @@
     "createNewPassword": "Créer un nouveau mot de passe?",
     "createNewPasswordDescription": "Veuillez saisir un nouveau mot de passe. Votre nouveau mot de passe doit être différent du mot de passe précédent.",
     "yourSuccessfullyChangedYourPassword": "Votre mot de passe a été modifié avec succès",
-    "youCanLoginNow": "Vous pouvez maintenant vous connecter"
+    "youCanLoginNow": "Vous pouvez maintenant vous connecter",
+    "weHaveJustSentAVerificationCodeTo":"Nous venons d'envoyer un code de vérification à"
   }
 }
