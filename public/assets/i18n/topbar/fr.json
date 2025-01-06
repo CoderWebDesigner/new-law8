@@ -5,6 +5,7 @@
         "welcome": "Bienvenue,",
         "yourProfile": "Votre profil",
         "settings": "Paramètres",
-        "logOut": "Se déconnecter"
+        "logOut": "Se déconnecter",
+        "editMyProfile": "Modifier mon profil"
     }
 }

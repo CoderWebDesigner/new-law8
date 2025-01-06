@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { MenuModule } from 'primeng/menu';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ClickOutsideDirective } from '../../../../@shared/directives/click-outside.directive';
 import { SharedModule } from '@shared/shared.module';
 @Component({
@@ -13,7 +13,8 @@ import { SharedModule } from '@shared/shared.module';
     MenuModule,
     SharedModule,
     CommonModule,
-    ClickOutsideDirective
+    ClickOutsideDirective,
+    NgOptimizedImage
   ],
   animations: [
     trigger('openClose', [
@@ -41,23 +42,6 @@ import { SharedModule } from '@shared/shared.module';
 export class AppUserComponent implements OnInit{
   public isOpen = false;
 
-  public profileMenu = [
-    {
-      title: 'topBar.yourProfile',
-      icon: 'icon-users',
-      link: '/profile',
-    },
-    {
-      title: 'topBar.settings',
-      icon: 'icon-user-setting',
-      link: '/settings',
-    },
-    {
-      title: 'topBar.logOut',
-      icon: 'icon-logout',
-      link: '/auth',
-    },
-  ];
   public themeMode = ['topBar.light', 'topBar.dark'];
   ngOnInit(): void {
   }

@@ -1,43 +1,25 @@
-<div class="relative" clickOutside
-(clickOutside)="isOpen = false">
+<div class="relative" clickOutside (clickOutside)="isOpen = false">
   <!-- Profile Button -->
-  <button (click)="toggleMenu()" class="relative flex p-2" type="button">
-    <i
-      clickOutside
-      (clickOutside)="isOpen = false"
-      class="icon-setting rounded-md text-lg text-primaryColor"
-    ></i>
+  <button (click)="toggleMenu()" class="relative flex items-center gap-2" type="button">
+    <img src="../../../../../../assets/images/user.png" alt="" class="rounded-full size-10">
+    <span class="font-sfProDisplay text-textSecondary font-bold text-sm">Tynisha Obey</span>
+    <i class="icon-arrow-down rounded-md text-lg text-primaryColor"></i>
   </button>
   <!-- Dropdown -->
-  <div
-    [@openClose]="isOpen ? 'open' : 'closed'"
-    class="absolute end-0 z-20 mt-2 w-60 origin-top-right transform rounded-md bg-background py-4 shadow-custom ring-1 ring-transparent ring-opacity-5 transition focus:outline-none dark:bg-bodyBg"
-  >
-    <div class="flext-row flex items-center px-4 pb-4">
-      <div class="flex w-10 shrink-0 items-center justify-center">
-        <i class="icon-open rounded-md text-lg text-headerTitle"></i>
-      </div>
-      <div class="overflow-hidden px-2 text-sm font-semibold text-headerTitle">
-        Admin
-        <p class="truncate text-ellipsis text-xs font-semibold text-subtitle">
-          admin&#64;admin.com
-        </p>
-      </div>
-    </div>
+  <div [@openClose]="isOpen ? 'open' : 'closed'"
+    class="absolute end-0 z-20 mt-2 w-60 origin-top-right transform rounded-2xl bg-white p-3 shadow-custom ring-1 ring-transparent ring-opacity-5 transition focus:outline-none">
+    <ul>
 
-    <div class="border-b border-dashed border-strokeGrey"></div>
-
-    <ul class="mx-4 my-2 flex flex-col">
-      @for (item of profileMenu; track $index) {
-      <li
-        routerLink="{{ item.link }}"
-        :key="$index"
-        class="inline-flex cursor-pointer items-center gap-2 rounded-md px-3 py-2 text-xs font-semibold text-subtitle transition-all duration-200 hover:bg-bodyBg hover:text-primaryColor"
-      >
-        <i [class]="item.icon"></i>
-        {{ item.title | translate }}
+      <li routerLink=""
+        class="inline-flex cursor-pointer font-sfProDisplay items-center gap-4 rounded-md px-4 py-3 text-sm font-medium text-textTertairy transition-all duration-200 hover:bg-bodyBg hover:text-primaryColor">
+        <img src="../../../../../../assets/images/user.png" alt="" class="rounded-full size-8">
+        <span>{{'topBar.editMyProfile'| translate}}</span>
       </li>
-      }
+      <li routerLink=""
+        class="inline-flex cursor-pointer font-sfProDisplay items-center gap-4 rounded-md px-4 py-3 text-sm font-medium text-textErrorBase transition-all duration-200 hover:bg-bodyBg hover:text-primaryColor">
+        <i class="icon-logout text-2xl"></i>
+        <span>{{'topBar.logOut'| translate}}</span>
+      </li>
     </ul>
 
   </div>

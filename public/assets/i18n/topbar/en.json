@@ -5,6 +5,7 @@
         "welcome": "Welcome,",
         "yourProfile": "Your Profile",
         "settings": "Settings",
-        "logOut": "Logout"
+        "logOut": "Logout",
+        "editMyProfile":"Edit My Profile"
     }
 }
