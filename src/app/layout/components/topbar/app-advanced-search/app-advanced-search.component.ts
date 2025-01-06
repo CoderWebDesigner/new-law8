@@ -23,17 +23,24 @@ export class AppAdvancedSearchComponent extends FormBaseClass implements OnInit{
           {
             type:'input',
             key:'search',
-            className:' text-grey400 border-grey200 w-[260px]',
+            className:'search text-grey400 border-grey200 w-[260px]',
             props:{
               placeholder:'topBar.search',
               icon:'icon-search',
+              withClear:true,
+              focus:()=>{
+                console.log('focus')
+              },
+              blur:()=>{
+                console.log('blur')
+              }
             }
           },
           {
             type:'button',
             props:{
               label:'topBar.advancedSearch',
-              class:'font-medium text-primary text-xs px-4 py-1.5'
+              class:'font-medium text-primary !text-xs !px-4 !py-1.5'
             }
           }
         ]

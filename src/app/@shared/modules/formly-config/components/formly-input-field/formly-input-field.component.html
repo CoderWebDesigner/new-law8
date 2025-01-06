@@ -10,5 +10,7 @@
   } @else if(props['type'] === 'password') {
   <i [ngClass]="showPassword ? 'icon-show' : 'icon-hide'" class="cursor-pointer" (click)="togglePassword()">
   </i>
+  }@else if(props['withClear'] && formControl.value){
+    <i class="icon-close text-xl text-borderPrimary cursor-pointer" (click)="formControl.reset()"></i>
   }
 </div>

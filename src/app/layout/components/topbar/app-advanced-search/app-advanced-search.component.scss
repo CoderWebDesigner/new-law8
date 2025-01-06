@@ -4,8 +4,8 @@
         .input-field{
             @apply h-9	
         }
-        button{
-            
-        }
+    }
+    .search:focus{
+        @apply w-[517px]
     }
 }
