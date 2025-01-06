@@ -137,7 +137,7 @@
    <div class="flex flex-col justify-between h-[calc(100vh-100px)]">
      @for(menu of _menuService.pagesMenu; track $index){
      <div [ngClass]="{'bottom-menu border-t pt-1 border-dividerColor':$index>0}">
-       <ul class="menu h-[520px] overflow-auto overflow-x-hidden  transition-all duration-300 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin  scrollbar-track-transparent scrollbar-thumb-muted ">
+       <ul class="menu overflow-auto overflow-x-hidden  transition-all duration-300 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin  scrollbar-track-transparent scrollbar-thumb-muted " [ngClass]="{'h-[520px]':$index==0}">
           @for (item of menu.items; track $index) {
           <li class="group px-6 text-textTertairy py-1 cursor-pointer mb-1 border-l-[3px] border-l-transparent hover:text-primary hover:bg-blue25  hover:border-primary
         } transition-all duration-200" routerLinkActive="active" [ngClass]="{
