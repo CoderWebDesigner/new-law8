@@ -1,5 +1,7 @@
 {
   "topBar": {
+    "advancedSearch":"بحث متقدم",
+    "search":"بحث",
     "welcome": "أهلا ,",
     "yourProfile": "بيانات حسابك",
     "settings": "الإعدادات",

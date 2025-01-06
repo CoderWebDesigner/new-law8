@@ -61,11 +61,27 @@ export class Menu {
           route: '/invoices',
         },
         {
-          icon: 'icon-reports',
+          icon: 'icon-report',
           label: 'menu.reports',
           route: '/reports',
         },
+      
       ],
     },
+    {
+      items:[
+        {
+          icon: 'icon-setting',
+          label: 'menu.settingsAndManage',
+          route: '/',
+
+        },
+        {
+          icon: 'icon-help',
+          label: 'menu.getHelp',
+          route: '/clients',
+        },
+      ]
+    }
   ];
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, input } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Language } from './language.model';
 import { LanguageService } from '@core/services/language.service';
@@ -35,6 +35,7 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
   ],
 })
 export class SharedLanguageComponent  implements OnInit {
+  showLabel=input(true)
   activeLang!: Language;
   public isOpen = false;
   listLang: any[] = [

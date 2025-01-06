@@ -1,0 +1,10 @@
+{
+    "topBar": {
+        "advancedSearch": "Recherche avancée",
+        "search": "Rechercher",
+        "welcome": "Bienvenue,",
+        "yourProfile": "Votre profil",
+        "settings": "Paramètres",
+        "logOut": "Se déconnecter"
+    }
+}

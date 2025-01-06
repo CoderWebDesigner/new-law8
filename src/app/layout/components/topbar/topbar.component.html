@@ -1,56 +1,30 @@
-<div class="relative bg-background">
-  <div class="mx-auto px-5">
-    <div class="flex items-center justify-between py-3 lg:justify-start">
-      <div class="hidden lg:block">
-        <div class="flex items-center">
-          <button (click)="onToggleSidebar()" class="me-3 flex">
-            <i class="icon-hambuger text-primaryColor"></i>
-          </button>
-          <div class="text-xl font-medium text-headerTitle">
-            {{ "topBar.welcome" | translate }} Mohamed
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile Navigation Menu Button -->
-      <div class="sm:order-1 lg:hidden">
-        <button
-          class="inline-flex items-center justify-center rounded-md bg-muted p-2 text-muted-foreground focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primaryColor hover:bg-muted-foreground hover:text-muted"
-          type="button"
-          aria-expanded="false"
-          (click)="toggleMobileMenu()"
-        >
-          <i class="icon-menu text-sm"></i>
+<div class="mx-auto">
+  <div class="flex items-center justify-between lg:justify-start">
+    <!-- Mobile Navigation Menu Button -->
+    <div class="sm:order-1 lg:hidden">
+      <button
+        class="inline-flex items-center justify-center rounded-md bg-muted p-2 text-muted-foreground focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primaryColor hover:bg-muted-foreground hover:text-muted"
+        type="button" aria-expanded="false" (click)="toggleMobileMenu()">
+        <i class="icon-menu text-sm"></i>
+      </button>
+    </div>
+    <div>
+      <app-advanced-search />
+    </div>
+    <!-- Profile menu -->
+    <div class="flex items-center justify-end sm:order-4 lg:w-0 lg:flex-1">
+      <div>
+        <button class="flex p-2 bg-white rounded-full" type="button">
+          <i class="icon-bell text-2xl text-textSecondary"></i>
         </button>
       </div>
-      <!-- Logo -->
-      <div class="flex items-center justify-center sm:order-2 lg:hidden">
-        <a
-          class="flex items-center justify-center rounded p-2 focus:outline-none focus:ring-1"
-        >
-          <!-- logo goes here -->
-          <img
-            src="assets/images/logo.svg"
-            alt="Law8 Logo"
-            style="width: 125px; height: 40px"
-          />
-        </a>
+      <div class="md:mx-6">
+        <shared-language [showLabel]="false" />
       </div>
 
-      <!-- Profile menu -->
-      <div class="flex items-center justify-end sm:order-4 lg:w-0 lg:flex-1">
-        <div class="md:me-5">
-          <shared-language></shared-language>
-        </div>
-        <div class="search mx-2 md:mx-4">
-          <button class="flex p-2" type="button">
-            <i class="icon-search text-lg text-primaryColor"></i>
-          </button>
-        </div>
-        <app-user></app-user>
-      </div>
+      <app-user></app-user>
     </div>
-    <!-- Mobile menu -->
-    <app-navbar-mobile></app-navbar-mobile>
   </div>
+  <!-- Mobile menu -->
+  <app-navbar-mobile></app-navbar-mobile>
 </div>

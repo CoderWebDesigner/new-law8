@@ -1,9 +1,11 @@
 <div class="relative">
   <button clickOutside (clickOutside)="isOpen = false" (click)="toggleLangMenu()"
     class="flex items-center bg-background p-2" type="button">
-    <img [src]="activeLang.flag" [class]="'flag flag-' + activeLang.code.toLowerCase()" class="size-8" />
-    <span class="mx-2 text-sm text-white">{{ activeLang.label }}</span>
-    <i class="icon-arrow-down text-white"></i>
+    <img [src]="activeLang.flag" [class]="'flag flag-' + activeLang.code.toLowerCase()" class="size-8 me-1" />
+    @if(showLabel()){
+      <span class="mx-1 text-sm text-white">{{ activeLang.label }}</span>
+    }
+    <i class="icon-arrow-down text-white ms-1"></i>
   </button>
   <div [@openClose]="isOpen ? 'open' : 'closed'"
     class="absolute end-0 z-20 mt-2 size-52	 transform rounded-md bg-background shadow-custom ring-1 ring-transparent ring-opacity-5 transition focus:outline-none dark:bg-bodyBg">

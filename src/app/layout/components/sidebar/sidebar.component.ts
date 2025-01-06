@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import {
   Component,
   inject,
+  OnInit,
 } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
@@ -19,12 +20,15 @@ import { SharedModule } from '@shared/shared.module';
   imports: [CommonModule, RouterLink, RouterLinkActive, SharedModule]
 })
 
-export class SidebarComponent {
+export class SidebarComponent implements OnInit{
   _menuService = inject(MenuService);
   _languageService = inject(LanguageService);
   _router = inject(Router);
 
   currentUrl!: string;
+  onToggleSidebar() {
+    this._menuService.toggleSidebar();
+  }
   constructor() {
     this._router.events
       .pipe(filter(event => event instanceof NavigationEnd))
@@ -32,8 +36,12 @@ export class SidebarComponent {
         this.currentUrl = event.urlAfterRedirects;
       });
   }
+  ngOnInit(): void {
+    console.log(this._menuService.pagesMenu)
+  }
 
   public toggleMenu(subMenu: SubMenuItem) {
+    console.log('submenu',subMenu)
     this._menuService.pagesMenu.forEach(page => {
       page.items.forEach(item => {
         if (item !== subMenu) {

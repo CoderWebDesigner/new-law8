@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TopbarComponent } from './components/topbar/topbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { TopbarComponent } from './components/topbar/topbar.component';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
   standalone:true,
-  imports: [SidebarComponent, RouterOutlet, TopbarComponent],
+  imports: [SidebarComponent, RouterOutlet,TopbarComponent],
 })
 export class LayoutComponent {
   constructor() {

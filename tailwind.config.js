@@ -81,6 +81,8 @@ module.exports = {
         bgColor:'var(--bg-color)',
         grey500:'var(--grey-500)',
         successBase500:'var(--success-base-500)',
+        blue200:'var(--blue-200)',
+        grey400:'var(--grey-400)'
       },
       screens: {
         xs: "344px",
