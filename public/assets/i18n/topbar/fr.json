@@ -6,6 +6,8 @@
         "yourProfile": "Votre profil",
         "settings": "Paramètres",
         "logOut": "Se déconnecter",
-        "editMyProfile": "Modifier mon profil"
+        "editMyProfile": "Modifier mon profil",
+        "result": "Résultat",
+        "tryAdvancedSearch":"Essayez la recherche avancée"
     }
 }

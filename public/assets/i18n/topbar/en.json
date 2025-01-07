@@ -1,11 +1,13 @@
 {
     "topBar": {
-        "advancedSearch":"Advanced Search",
-        "search":"Search",
+        "advancedSearch": "Advanced Search",
+        "search": "Search",
         "welcome": "Welcome,",
         "yourProfile": "Your Profile",
         "settings": "Settings",
         "logOut": "Logout",
-        "editMyProfile":"Edit My Profile"
+        "editMyProfile": "Edit My Profile",
+        "result": "Result",
+        "tryAdvancedSearch":"Try Advanced Search"
     }
 }

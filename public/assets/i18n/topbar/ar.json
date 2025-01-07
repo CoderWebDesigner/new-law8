@@ -1,11 +1,13 @@
 {
   "topBar": {
-    "advancedSearch":"بحث متقدم",
-    "search":"بحث",
+    "advancedSearch": "بحث متقدم",
+    "search": "بحث",
     "welcome": "أهلا ,",
     "yourProfile": "بيانات حسابك",
     "settings": "الإعدادات",
     "logOut": "تسجيل خروج",
-    "editMyProfile": "تعديل ملفي الشخصي"
+    "editMyProfile": "تعديل ملفي الشخصي",
+    "result": "النتيجة",
+        "tryAdvancedSearch":"جرب البحث المتقدم"
   }
 }

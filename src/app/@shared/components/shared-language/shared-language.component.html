@@ -8,7 +8,7 @@
     <i class="icon-arrow-down text-white ms-1"></i>
   </button>
   <div [@openClose]="isOpen ? 'open' : 'closed'"
-    class="absolute end-0 z-20 mt-2 size-52	 transform rounded-md bg-background shadow-custom ring-1 ring-transparent ring-opacity-5 transition focus:outline-none dark:bg-bodyBg">
+    class="absolute end-0 z-20 mt-2 size-52	 transform rounded-md bg-background ring-1 ring-transparent ring-opacity-5 transition focus:outline-none dark:bg-bodyBg">
     <ul class="flex flex-col py-4 px-2 bg-white rounded-2xl	 shadow-lg gap-2">
       @for (lang of listLang; track $index) {
       <li (click)="setActiveLang(lang.code)" :key="$index"

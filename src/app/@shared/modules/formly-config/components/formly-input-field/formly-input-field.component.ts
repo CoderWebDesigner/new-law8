@@ -14,6 +14,10 @@ export class FormlyInputFieldComponent extends FieldType<FieldTypeConfig> implem
   inputType?: string = 'input'
   ngOnInit(): void {
     this.inputType = this.props['type']
+    
+  }
+  onInput(e:any){
+    if(this.props['input']) this.props['input'](e)
   }
   togglePassword() {
     this.showPassword = !this.showPassword;
