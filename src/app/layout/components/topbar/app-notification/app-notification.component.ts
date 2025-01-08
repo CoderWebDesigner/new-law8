@@ -34,7 +34,7 @@ import { SharedModule } from 'src/app/@shared/shared.module';
   ],
 })
 export class AppNotificationComponent {
-  isOpen: boolean=true;
+  isOpen!: boolean;
   notifications:any[]=[
     {
       module:'user',
