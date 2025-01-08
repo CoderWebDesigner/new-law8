@@ -73,10 +73,11 @@ module.exports = {
         borderErrorSubtle:'var(--border-error_subtle)',
         textTertairy:'var(--text-tertairy)',
         textConfirmTitle:'var(--text-confirm-title)',
-        greyScale300:'var(--grey-scale-300)',
         dividerColor:'var(--divider-color)',
         bgColor:'var(--bg-color)',
         successBase500:'var(--success-base-500)',
+        greyScale100:'var(--greyscale100)',
+        greyScale300:'var(--grey-scale-300)',
         blue200:'var(--blue-200)',
         grey50:'var(--grey-50)',
         grey100:'var(--grey-100)',
@@ -86,6 +87,8 @@ module.exports = {
         blue25:'var(--blue-25)',
         blue50:'var(--blue-50)',
         blue600:'var(--blue-600)',
+        textSecondaryHover:'var(--text-secondary-hover)',
+        
       },
       screens: {
         xs: "344px",

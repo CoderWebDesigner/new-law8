@@ -8,6 +8,9 @@
         "logOut": "Logout",
         "editMyProfile": "Edit My Profile",
         "result": "Result",
-        "tryAdvancedSearch":"Try Advanced Search"
+        "tryAdvancedSearch": "Try Advanced Search",
+        "seeAllNotifications": "See All Notifications",
+        "markAllAsRead": "Mark all as read",
+        "notifications": "Notifications"
     }
 }

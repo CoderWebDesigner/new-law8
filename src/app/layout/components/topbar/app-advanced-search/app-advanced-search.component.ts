@@ -44,7 +44,7 @@ import { SharedModule } from 'src/app/@shared/shared.module';
   ],
 })
 export class AppAdvancedSearchComponent implements OnInit {
-  isOpen: boolean=true;
+  isOpen!: boolean;
   searchResult = [
     {
       code:'00012-001',

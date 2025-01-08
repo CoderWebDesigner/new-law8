@@ -10,6 +10,7 @@ import { SharedLanguageComponent } from '@shared/components/shared-language/shar
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '@shared/shared.module';
 import { AppAdvancedSearchComponent } from './app-advanced-search/app-advanced-search.component';
+import { AppNotificationComponent } from './app-notification/app-notification.component';
 @Component({
   selector: 'app-topbar',
   templateUrl: './topbar.component.html',
@@ -20,7 +21,8 @@ import { AppAdvancedSearchComponent } from './app-advanced-search/app-advanced-s
     SharedLanguageComponent,
     CommonModule,
     SharedModule,
-    AppAdvancedSearchComponent
+    AppAdvancedSearchComponent,
+    AppNotificationComponent
   ],
 
 })
