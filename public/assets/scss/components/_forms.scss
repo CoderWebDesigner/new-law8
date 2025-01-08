@@ -32,14 +32,13 @@
     }
   }
   .p-inputotp{
-
     &-input{
       @apply font-Manrope text-2xl font-extrabold size-14 rounded-xl border border-grey200  bg-grey50 focus:border focus:border-primary focus:shadow-none focus:bg-white
     }
     .p-filled{
       @apply bg-blue25 border-0
     }
-    @apply gap-8;
+    @apply gap-8 justify-center ;
   }
 
 }
