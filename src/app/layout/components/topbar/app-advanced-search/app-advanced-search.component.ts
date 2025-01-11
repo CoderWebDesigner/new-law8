@@ -17,7 +17,7 @@ import { SharedModule } from 'src/app/@shared/shared.module';
     HighlightPipe,
     SharedButtonComponent
   ],
-  providers:[HighlightPipe],
+  providers: [HighlightPipe],
   templateUrl: './app-advanced-search.component.html',
   styleUrl: './app-advanced-search.component.scss',
   animations: [
@@ -47,16 +47,16 @@ export class AppAdvancedSearchComponent implements OnInit {
   isOpen!: boolean;
   searchResult = [
     {
-      code:'00012-001',
-      name:'Metwaly Mohamed',
-      desc:"Text or description written here",
-      category:"Matter"
+      code: '00012-001',
+      name: 'Metwaly Mohamed',
+      desc: "Text or description written here",
+      category: "Matter"
     }
   ]
-  searchValue!:string;
-  formly!:FormGroup;
-  formlyFields:FormlyFieldConfig[]=[]
-  formlyModel:any;
+  searchValue!: string;
+  formly!: FormGroup;
+  formlyFields: FormlyFieldConfig[] = []
+  formlyModel: any;
   ngOnInit(): void {
     this.initForm()
   }
@@ -67,23 +67,26 @@ export class AppAdvancedSearchComponent implements OnInit {
         key: 'search',
         className: 'relative text-grey400 border-grey200',
         props: {
-          class: 'transition-all duration-200 ease-in-out z-20 ', 
+          class: 'transition-all duration-200 ease-in-out z-20 ',
           placeholder: 'topBar.search',
           icon: 'icon-search',
           withClear: true,
-          autocomplete: 'off',
-          input:(e:any)=>{
-            this.searchValue=e.target.value
+          attributes: {
+            autocomplete: 'off'
           },
-          focus:()=>{
-            this.isOpen=true
+          input: (e: any) => {
+            this.searchValue = e.target.value
           },
-          blur:()=>{
-              this.isOpen=false
-            
+          focus: () => {
+            this.isOpen = true
+          },
+          blur: () => {
+            this.isOpen = false
+
           }
         },
-        
+
+
       },
     ];
 
