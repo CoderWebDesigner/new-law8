@@ -73,7 +73,7 @@ export class Menu {
         {
           icon: 'icon-setting',
           label: 'menu.settingsAndManage',
-          route: '/',
+          route: '/setting',
 
         },
         {
