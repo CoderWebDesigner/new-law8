@@ -37,7 +37,7 @@ export class AppNotificationComponent {
   isOpen!: boolean;
   notifications:any[]=[
     {
-      module:'user',
+      module:'client',
       title:'New user added to LAW8',
       description:'Ahmed ali created a new task #t0001',
       date:new Date(),
@@ -45,6 +45,34 @@ export class AppNotificationComponent {
     },
     {
       module:'task',
+      title:'New user added to LAW8',
+      description:'Ahmed ali created a new task #t0001',
+      date:new Date(),
+      seen:false
+    },
+    {
+      module:'meeting',
+      title:'New user added to LAW8',
+      description:'Ahmed ali created a new task #t0001',
+      date:new Date(),
+      seen:false
+    },
+    {
+      module:'hearing-session',
+      title:'New user added to LAW8',
+      description:'Ahmed ali created a new task #t0001',
+      date:new Date(),
+      seen:false
+    },
+    {
+      module:'matter',
+      title:'New user added to LAW8',
+      description:'Ahmed ali created a new task #t0001',
+      date:new Date(),
+      seen:false
+    },
+    {
+      module:'expert-meeting',
       title:'New user added to LAW8',
       description:'Ahmed ali created a new task #t0001',
       date:new Date(),
