@@ -1,27 +1,51 @@
-# New Law8
+# Law8 — Legal Practice Management System (v2)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.7.
+A modern legal practice management platform built for law firms to manage cases, clients, billing, and internal operations from a single dashboard. This is the rebuilt/modernized version of the original Law8 platform, migrated to Angular 18 with a fully revamped UI.
 
-## Development server
+## Key Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Case & Matter Management** — track legal matters from intake to resolution
+- **Task Management** — assign and follow up on team tasks tied to matters
+- **Time Tracking & Billing** — timesheet logging feeding into client billing
+- **User & Role Management** — firm staff accounts with role-based access
+- **Dynamic Forms** — data-entry forms built with declarative JSON schemas instead of hand-coded templates, so new fields ship without touching component code
+- **Global Search** — cross-module search across matters, users, and records
+- **Multi-language Support** — full Arabic/English localization
+- **Authentication** — JWT-based auth with route guards and HTTP interceptors
 
-## Code scaffolding
+## Tech Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+| Layer | Technology |
+|---|---|
+| Framework | Angular 18 (standalone architecture) |
+| UI Kit | PrimeNG (v18 theming) |
+| Styling | Tailwind CSS |
+| Forms | ngx-formly + ngx-formly PrimeNG adapter |
+| Auth | JWT (jwt-decode) |
+| i18n | ngx-translate (modular translation files per feature) |
+| UX utilities | ngx-toastr, ngx-spinner |
 
-## Build
+## Architecture Highlights
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+src/app/
+├── @core/          # auth, interceptors, API services, models, shared classes
+├── @shared/        # shared components, directives, pipes, reusable modules
+├── layout/         # app shell (topbar, sidebar navigation, layout services)
+└── pages/          # feature modules (matters, billing, timesheet, users...)
+```
 
-## Running unit tests
+Translation files are split per feature (`auth/`, `topbar/`, `common/`, etc.) rather than one large JSON, keeping i18n maintainable as the app grows.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Getting Started
 
-## Running end-to-end tests
+```bash
+npm install
+ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Navigate to `http://localhost:4200/`.
 
-## Further help
+## Notes
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project replaces an earlier Angular 16 version of the same system — see [`law8`](../law8) for the previous release. The rebuild focuses on a standalone-component architecture, Tailwind-based design system, and an upgraded PrimeNG theme layer.
