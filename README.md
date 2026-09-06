@@ -45,7 +45,3 @@ ng serve
 ```
 
 Navigate to `http://localhost:4200/`.
-
-## Notes
-
-This project replaces an earlier Angular 16 version of the same system — see [`law8`](../law8) for the previous release. The rebuild focuses on a standalone-component architecture, Tailwind-based design system, and an upgraded PrimeNG theme layer.
